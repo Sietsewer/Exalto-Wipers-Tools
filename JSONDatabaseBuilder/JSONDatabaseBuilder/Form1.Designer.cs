@@ -36,33 +36,21 @@
             this.dataArms = new System.Windows.Forms.DataGridView();
             this.Blades = new System.Windows.Forms.TabPage();
             this.dataBlades = new System.Windows.Forms.DataGridView();
-            this.length = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Data = new System.Windows.Forms.TabPage();
             this.outputData = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.appendToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.appendToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.armMaxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bladeMaxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hohDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.armTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bladeTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.artNrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.wiperMotorBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.wiperArmBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.wiperBladeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.wiperMotorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.wiperMotorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.applType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lengthMin = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,6 +62,24 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.range = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.armMaxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.angleMin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.angleMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.angleStep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bladeMaxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hohDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.armTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bladeTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.artNrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.length = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.Motors.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataMotors)).BeginInit();
@@ -126,7 +132,11 @@
             this.dataMotors.AutoGenerateColumns = false;
             this.dataMotors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataMotors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.range,
             this.armMaxDataGridViewTextBoxColumn,
+            this.angleMin,
+            this.angleMax,
+            this.angleStep,
             this.bladeMaxDataGridViewTextBoxColumn,
             this.hohDataGridViewTextBoxColumn,
             this.armTypeDataGridViewTextBoxColumn,
@@ -160,6 +170,7 @@
             this.dataArms.AutoGenerateColumns = false;
             this.dataArms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataArms.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.applType,
             this.lengthMin,
@@ -197,6 +208,7 @@
             this.dataBlades.AutoGenerateColumns = false;
             this.dataBlades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataBlades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn13,
             this.length,
             this.dataGridViewTextBoxColumn14,
@@ -207,12 +219,6 @@
             this.dataBlades.Name = "dataBlades";
             this.dataBlades.Size = new System.Drawing.Size(1024, 506);
             this.dataBlades.TabIndex = 1;
-            // 
-            // length
-            // 
-            this.length.DataPropertyName = "length";
-            this.length.HeaderText = "length";
-            this.length.Name = "length";
             // 
             // Data
             // 
@@ -279,10 +285,6 @@
             this.loadToolStripMenuItem.Text = "Load";
             this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // appendToolStripMenuItem
             // 
             this.appendToolStripMenuItem.Name = "appendToolStripMenuItem";
@@ -290,53 +292,9 @@
             this.appendToolStripMenuItem.Text = "Append";
             this.appendToolStripMenuItem.Click += new System.EventHandler(this.appendToolStripMenuItem_Click);
             // 
-            // armMaxDataGridViewTextBoxColumn
+            // openFileDialog1
             // 
-            this.armMaxDataGridViewTextBoxColumn.DataPropertyName = "armMax";
-            this.armMaxDataGridViewTextBoxColumn.HeaderText = "armMax";
-            this.armMaxDataGridViewTextBoxColumn.Name = "armMaxDataGridViewTextBoxColumn";
-            // 
-            // bladeMaxDataGridViewTextBoxColumn
-            // 
-            this.bladeMaxDataGridViewTextBoxColumn.DataPropertyName = "bladeMax";
-            this.bladeMaxDataGridViewTextBoxColumn.HeaderText = "bladeMax";
-            this.bladeMaxDataGridViewTextBoxColumn.Name = "bladeMaxDataGridViewTextBoxColumn";
-            // 
-            // hohDataGridViewTextBoxColumn
-            // 
-            this.hohDataGridViewTextBoxColumn.DataPropertyName = "hoh";
-            this.hohDataGridViewTextBoxColumn.HeaderText = "hoh";
-            this.hohDataGridViewTextBoxColumn.Name = "hohDataGridViewTextBoxColumn";
-            // 
-            // armTypeDataGridViewTextBoxColumn
-            // 
-            this.armTypeDataGridViewTextBoxColumn.DataPropertyName = "armType";
-            this.armTypeDataGridViewTextBoxColumn.HeaderText = "armType";
-            this.armTypeDataGridViewTextBoxColumn.Name = "armTypeDataGridViewTextBoxColumn";
-            // 
-            // bladeTypeDataGridViewTextBoxColumn
-            // 
-            this.bladeTypeDataGridViewTextBoxColumn.DataPropertyName = "bladeType";
-            this.bladeTypeDataGridViewTextBoxColumn.HeaderText = "bladeType";
-            this.bladeTypeDataGridViewTextBoxColumn.Name = "bladeTypeDataGridViewTextBoxColumn";
-            // 
-            // artNrDataGridViewTextBoxColumn
-            // 
-            this.artNrDataGridViewTextBoxColumn.DataPropertyName = "artNr";
-            this.artNrDataGridViewTextBoxColumn.HeaderText = "artNr";
-            this.artNrDataGridViewTextBoxColumn.Name = "artNrDataGridViewTextBoxColumn";
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // commentDataGridViewTextBoxColumn
-            // 
-            this.commentDataGridViewTextBoxColumn.DataPropertyName = "comment";
-            this.commentDataGridViewTextBoxColumn.HeaderText = "comment";
-            this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // wiperMotorBindingSource2
             // 
@@ -345,30 +303,6 @@
             // wiperArmBindingSource
             // 
             this.wiperArmBindingSource.DataSource = typeof(JSONDatabaseBuilder.WiperArm);
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "bladeType";
-            this.dataGridViewTextBoxColumn13.HeaderText = "bladeType";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "artNr";
-            this.dataGridViewTextBoxColumn14.HeaderText = "artNr";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "name";
-            this.dataGridViewTextBoxColumn15.HeaderText = "name";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "comment";
-            this.dataGridViewTextBoxColumn16.HeaderText = "comment";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             // 
             // wiperBladeBindingSource
             // 
@@ -381,6 +315,12 @@
             // wiperMotorBindingSource
             // 
             this.wiperMotorBindingSource.DataSource = typeof(JSONDatabaseBuilder.WiperMotor);
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "range";
+            this.dataGridViewTextBoxColumn2.HeaderText = "range";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -449,6 +389,114 @@
             this.dataGridViewTextBoxColumn8.HeaderText = "comment";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
+            // range
+            // 
+            this.range.DataPropertyName = "range";
+            this.range.HeaderText = "range";
+            this.range.Name = "range";
+            // 
+            // armMaxDataGridViewTextBoxColumn
+            // 
+            this.armMaxDataGridViewTextBoxColumn.DataPropertyName = "armMax";
+            this.armMaxDataGridViewTextBoxColumn.HeaderText = "armMax";
+            this.armMaxDataGridViewTextBoxColumn.Name = "armMaxDataGridViewTextBoxColumn";
+            // 
+            // angleMin
+            // 
+            this.angleMin.DataPropertyName = "angleMin";
+            this.angleMin.HeaderText = "angleMin";
+            this.angleMin.Name = "angleMin";
+            // 
+            // angleMax
+            // 
+            this.angleMax.DataPropertyName = "angleMax";
+            this.angleMax.HeaderText = "angleMax";
+            this.angleMax.Name = "angleMax";
+            // 
+            // angleStep
+            // 
+            this.angleStep.DataPropertyName = "angleStep";
+            this.angleStep.HeaderText = "angleStep";
+            this.angleStep.Name = "angleStep";
+            // 
+            // bladeMaxDataGridViewTextBoxColumn
+            // 
+            this.bladeMaxDataGridViewTextBoxColumn.DataPropertyName = "bladeMax";
+            this.bladeMaxDataGridViewTextBoxColumn.HeaderText = "bladeMax";
+            this.bladeMaxDataGridViewTextBoxColumn.Name = "bladeMaxDataGridViewTextBoxColumn";
+            // 
+            // hohDataGridViewTextBoxColumn
+            // 
+            this.hohDataGridViewTextBoxColumn.DataPropertyName = "hoh";
+            this.hohDataGridViewTextBoxColumn.HeaderText = "hoh";
+            this.hohDataGridViewTextBoxColumn.Name = "hohDataGridViewTextBoxColumn";
+            // 
+            // armTypeDataGridViewTextBoxColumn
+            // 
+            this.armTypeDataGridViewTextBoxColumn.DataPropertyName = "armType";
+            this.armTypeDataGridViewTextBoxColumn.HeaderText = "armType";
+            this.armTypeDataGridViewTextBoxColumn.Name = "armTypeDataGridViewTextBoxColumn";
+            // 
+            // bladeTypeDataGridViewTextBoxColumn
+            // 
+            this.bladeTypeDataGridViewTextBoxColumn.DataPropertyName = "bladeType";
+            this.bladeTypeDataGridViewTextBoxColumn.HeaderText = "bladeType";
+            this.bladeTypeDataGridViewTextBoxColumn.Name = "bladeTypeDataGridViewTextBoxColumn";
+            // 
+            // artNrDataGridViewTextBoxColumn
+            // 
+            this.artNrDataGridViewTextBoxColumn.DataPropertyName = "artNr";
+            this.artNrDataGridViewTextBoxColumn.HeaderText = "artNr";
+            this.artNrDataGridViewTextBoxColumn.Name = "artNrDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // commentDataGridViewTextBoxColumn
+            // 
+            this.commentDataGridViewTextBoxColumn.DataPropertyName = "comment";
+            this.commentDataGridViewTextBoxColumn.HeaderText = "comment";
+            this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "range";
+            this.dataGridViewTextBoxColumn1.HeaderText = "range";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "bladeType";
+            this.dataGridViewTextBoxColumn13.HeaderText = "bladeType";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // length
+            // 
+            this.length.DataPropertyName = "length";
+            this.length.HeaderText = "length";
+            this.length.Name = "length";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "artNr";
+            this.dataGridViewTextBoxColumn14.HeaderText = "artNr";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn15.HeaderText = "name";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "comment";
+            this.dataGridViewTextBoxColumn16.HeaderText = "comment";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -495,11 +543,6 @@
         private System.Windows.Forms.TabPage Blades;
         private System.Windows.Forms.DataGridView dataBlades;
         private System.Windows.Forms.BindingSource wiperBladeBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn length;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.TabPage Data;
         private System.Windows.Forms.TextBox outputData;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -508,7 +551,12 @@
         private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem appendToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn range;
         private System.Windows.Forms.DataGridViewTextBoxColumn armMaxDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn angleMin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn angleMax;
+        private System.Windows.Forms.DataGridViewTextBoxColumn angleStep;
         private System.Windows.Forms.DataGridViewTextBoxColumn bladeMaxDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hohDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn armTypeDataGridViewTextBoxColumn;
@@ -516,7 +564,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn artNrDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn commentDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ToolStripMenuItem appendToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn applType;
         private System.Windows.Forms.DataGridViewTextBoxColumn lengthMin;
@@ -528,6 +576,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn length;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
     }
 }
 

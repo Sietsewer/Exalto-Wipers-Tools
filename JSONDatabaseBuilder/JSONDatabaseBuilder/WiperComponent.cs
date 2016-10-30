@@ -10,5 +10,6 @@ namespace JSONDatabaseBuilder
         public string artNr { get; set; }
         public string name { get; set; }
         public string comment { get; set; }
+        public string range { get; set; }
     }
 }
