@@ -15,5 +15,7 @@ namespace JSONDatabaseBuilder
         public decimal angleStep { get; set; }
         public string armType { get; set; }
         public string bladeType { get; set; }
+        public bool isPendulum { get; set; }
+        public bool isPantograph { get; set; }
     }
 }

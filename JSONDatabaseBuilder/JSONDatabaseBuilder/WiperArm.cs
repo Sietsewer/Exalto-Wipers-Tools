@@ -15,5 +15,7 @@ namespace JSONDatabaseBuilder
         public decimal bladeLengthMax { get; set; }
         public string bladeType { get; set; }
         public string applType { get; set; }
+        public bool isPantograph { get; set; }
+        public bool centreMounted { get; set; }
     }
 }

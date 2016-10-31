@@ -45,8 +45,28 @@
             this.appendToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.length = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.range = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isPendulum = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.isPantograph = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.angleMin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.angleMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.angleStep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.armMaxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bladeMaxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hohDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.armTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bladeTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.artNrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.wiperMotorBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.wiperArmBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.wiperBladeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.wiperMotorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.wiperMotorBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -56,30 +76,14 @@
             this.lengthMin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lengthMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bladeLengthMin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.centreMounted = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.bladeLengthMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.range = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.armMaxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.angleMin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.angleMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.angleStep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bladeMaxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hohDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.armTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bladeTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.artNrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.length = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.Motors.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataMotors)).BeginInit();
@@ -133,6 +137,8 @@
             this.dataMotors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataMotors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.range,
+            this.isPendulum,
+            this.isPantograph,
             this.armMaxDataGridViewTextBoxColumn,
             this.angleMin,
             this.angleMax,
@@ -176,6 +182,8 @@
             this.lengthMin,
             this.lengthMax,
             this.bladeLengthMin,
+            this.dataGridViewCheckBoxColumn1,
+            this.centreMounted,
             this.bladeLengthMax,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
@@ -296,6 +304,102 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "range";
+            this.dataGridViewTextBoxColumn1.HeaderText = "range";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // length
+            // 
+            this.length.DataPropertyName = "length";
+            this.length.HeaderText = "length";
+            this.length.Name = "length";
+            // 
+            // range
+            // 
+            this.range.DataPropertyName = "range";
+            this.range.HeaderText = "range";
+            this.range.Name = "range";
+            // 
+            // isPendulum
+            // 
+            this.isPendulum.DataPropertyName = "isPendulum";
+            this.isPendulum.HeaderText = "isPendulum";
+            this.isPendulum.Name = "isPendulum";
+            // 
+            // isPantograph
+            // 
+            this.isPantograph.DataPropertyName = "isPantograph";
+            this.isPantograph.HeaderText = "isPantograph";
+            this.isPantograph.Name = "isPantograph";
+            // 
+            // angleMin
+            // 
+            this.angleMin.DataPropertyName = "angleMin";
+            this.angleMin.HeaderText = "angleMin";
+            this.angleMin.Name = "angleMin";
+            // 
+            // angleMax
+            // 
+            this.angleMax.DataPropertyName = "angleMax";
+            this.angleMax.HeaderText = "angleMax";
+            this.angleMax.Name = "angleMax";
+            // 
+            // angleStep
+            // 
+            this.angleStep.DataPropertyName = "angleStep";
+            this.angleStep.HeaderText = "angleStep";
+            this.angleStep.Name = "angleStep";
+            // 
+            // armMaxDataGridViewTextBoxColumn
+            // 
+            this.armMaxDataGridViewTextBoxColumn.DataPropertyName = "armMax";
+            this.armMaxDataGridViewTextBoxColumn.HeaderText = "armMax";
+            this.armMaxDataGridViewTextBoxColumn.Name = "armMaxDataGridViewTextBoxColumn";
+            // 
+            // bladeMaxDataGridViewTextBoxColumn
+            // 
+            this.bladeMaxDataGridViewTextBoxColumn.DataPropertyName = "bladeMax";
+            this.bladeMaxDataGridViewTextBoxColumn.HeaderText = "bladeMax";
+            this.bladeMaxDataGridViewTextBoxColumn.Name = "bladeMaxDataGridViewTextBoxColumn";
+            // 
+            // hohDataGridViewTextBoxColumn
+            // 
+            this.hohDataGridViewTextBoxColumn.DataPropertyName = "hoh";
+            this.hohDataGridViewTextBoxColumn.HeaderText = "hoh";
+            this.hohDataGridViewTextBoxColumn.Name = "hohDataGridViewTextBoxColumn";
+            // 
+            // armTypeDataGridViewTextBoxColumn
+            // 
+            this.armTypeDataGridViewTextBoxColumn.DataPropertyName = "armType";
+            this.armTypeDataGridViewTextBoxColumn.HeaderText = "armType";
+            this.armTypeDataGridViewTextBoxColumn.Name = "armTypeDataGridViewTextBoxColumn";
+            // 
+            // bladeTypeDataGridViewTextBoxColumn
+            // 
+            this.bladeTypeDataGridViewTextBoxColumn.DataPropertyName = "bladeType";
+            this.bladeTypeDataGridViewTextBoxColumn.HeaderText = "bladeType";
+            this.bladeTypeDataGridViewTextBoxColumn.Name = "bladeTypeDataGridViewTextBoxColumn";
+            // 
+            // artNrDataGridViewTextBoxColumn
+            // 
+            this.artNrDataGridViewTextBoxColumn.DataPropertyName = "artNr";
+            this.artNrDataGridViewTextBoxColumn.HeaderText = "artNr";
+            this.artNrDataGridViewTextBoxColumn.Name = "artNrDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // commentDataGridViewTextBoxColumn
+            // 
+            this.commentDataGridViewTextBoxColumn.DataPropertyName = "comment";
+            this.commentDataGridViewTextBoxColumn.HeaderText = "comment";
+            this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
+            // 
             // wiperMotorBindingSource2
             // 
             this.wiperMotorBindingSource2.DataSource = typeof(JSONDatabaseBuilder.WiperMotor);
@@ -303,6 +407,30 @@
             // wiperArmBindingSource
             // 
             this.wiperArmBindingSource.DataSource = typeof(JSONDatabaseBuilder.WiperArm);
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "bladeType";
+            this.dataGridViewTextBoxColumn13.HeaderText = "bladeType";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "artNr";
+            this.dataGridViewTextBoxColumn14.HeaderText = "artNr";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn15.HeaderText = "name";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "comment";
+            this.dataGridViewTextBoxColumn16.HeaderText = "comment";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             // 
             // wiperBladeBindingSource
             // 
@@ -352,6 +480,18 @@
             this.bladeLengthMin.HeaderText = "bladeLengthMin";
             this.bladeLengthMin.Name = "bladeLengthMin";
             // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "isPantograph";
+            this.dataGridViewCheckBoxColumn1.HeaderText = "isPantograph";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            // 
+            // centreMounted
+            // 
+            this.centreMounted.DataPropertyName = "centreMounted";
+            this.centreMounted.HeaderText = "centreMounted";
+            this.centreMounted.Name = "centreMounted";
+            // 
             // bladeLengthMax
             // 
             this.bladeLengthMax.DataPropertyName = "bladeLengthMax";
@@ -388,114 +528,6 @@
             this.dataGridViewTextBoxColumn8.DataPropertyName = "comment";
             this.dataGridViewTextBoxColumn8.HeaderText = "comment";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // range
-            // 
-            this.range.DataPropertyName = "range";
-            this.range.HeaderText = "range";
-            this.range.Name = "range";
-            // 
-            // armMaxDataGridViewTextBoxColumn
-            // 
-            this.armMaxDataGridViewTextBoxColumn.DataPropertyName = "armMax";
-            this.armMaxDataGridViewTextBoxColumn.HeaderText = "armMax";
-            this.armMaxDataGridViewTextBoxColumn.Name = "armMaxDataGridViewTextBoxColumn";
-            // 
-            // angleMin
-            // 
-            this.angleMin.DataPropertyName = "angleMin";
-            this.angleMin.HeaderText = "angleMin";
-            this.angleMin.Name = "angleMin";
-            // 
-            // angleMax
-            // 
-            this.angleMax.DataPropertyName = "angleMax";
-            this.angleMax.HeaderText = "angleMax";
-            this.angleMax.Name = "angleMax";
-            // 
-            // angleStep
-            // 
-            this.angleStep.DataPropertyName = "angleStep";
-            this.angleStep.HeaderText = "angleStep";
-            this.angleStep.Name = "angleStep";
-            // 
-            // bladeMaxDataGridViewTextBoxColumn
-            // 
-            this.bladeMaxDataGridViewTextBoxColumn.DataPropertyName = "bladeMax";
-            this.bladeMaxDataGridViewTextBoxColumn.HeaderText = "bladeMax";
-            this.bladeMaxDataGridViewTextBoxColumn.Name = "bladeMaxDataGridViewTextBoxColumn";
-            // 
-            // hohDataGridViewTextBoxColumn
-            // 
-            this.hohDataGridViewTextBoxColumn.DataPropertyName = "hoh";
-            this.hohDataGridViewTextBoxColumn.HeaderText = "hoh";
-            this.hohDataGridViewTextBoxColumn.Name = "hohDataGridViewTextBoxColumn";
-            // 
-            // armTypeDataGridViewTextBoxColumn
-            // 
-            this.armTypeDataGridViewTextBoxColumn.DataPropertyName = "armType";
-            this.armTypeDataGridViewTextBoxColumn.HeaderText = "armType";
-            this.armTypeDataGridViewTextBoxColumn.Name = "armTypeDataGridViewTextBoxColumn";
-            // 
-            // bladeTypeDataGridViewTextBoxColumn
-            // 
-            this.bladeTypeDataGridViewTextBoxColumn.DataPropertyName = "bladeType";
-            this.bladeTypeDataGridViewTextBoxColumn.HeaderText = "bladeType";
-            this.bladeTypeDataGridViewTextBoxColumn.Name = "bladeTypeDataGridViewTextBoxColumn";
-            // 
-            // artNrDataGridViewTextBoxColumn
-            // 
-            this.artNrDataGridViewTextBoxColumn.DataPropertyName = "artNr";
-            this.artNrDataGridViewTextBoxColumn.HeaderText = "artNr";
-            this.artNrDataGridViewTextBoxColumn.Name = "artNrDataGridViewTextBoxColumn";
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // commentDataGridViewTextBoxColumn
-            // 
-            this.commentDataGridViewTextBoxColumn.DataPropertyName = "comment";
-            this.commentDataGridViewTextBoxColumn.HeaderText = "comment";
-            this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "range";
-            this.dataGridViewTextBoxColumn1.HeaderText = "range";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "bladeType";
-            this.dataGridViewTextBoxColumn13.HeaderText = "bladeType";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // length
-            // 
-            this.length.DataPropertyName = "length";
-            this.length.HeaderText = "length";
-            this.length.Name = "length";
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "artNr";
-            this.dataGridViewTextBoxColumn14.HeaderText = "artNr";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "name";
-            this.dataGridViewTextBoxColumn15.HeaderText = "name";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "comment";
-            this.dataGridViewTextBoxColumn16.HeaderText = "comment";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             // 
             // Form1
             // 
@@ -552,7 +584,15 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.ToolStripMenuItem appendToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn length;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn range;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn isPendulum;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn isPantograph;
         private System.Windows.Forms.DataGridViewTextBoxColumn armMaxDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn angleMin;
         private System.Windows.Forms.DataGridViewTextBoxColumn angleMax;
@@ -570,18 +610,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn lengthMin;
         private System.Windows.Forms.DataGridViewTextBoxColumn lengthMax;
         private System.Windows.Forms.DataGridViewTextBoxColumn bladeLengthMin;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn centreMounted;
         private System.Windows.Forms.DataGridViewTextBoxColumn bladeLengthMax;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn length;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
     }
 }
 
