@@ -12,11 +12,23 @@ namespace JSONDatabaseBuilder
 {
     public partial class Form1 : Form
     {
+        public static string defaultFile;
+
         public DataSet dataSet;
 
-        public Form1()
+        public Form1(string[] args)
         {
             InitializeComponent();
+
+            foreach(string s in args)
+            {
+                if (File.Exists(s))
+                {
+                    defaultFile = s;
+                    loadData(false, s);
+                    break;
+                }
+            }
 
             /*dataSet = new DataSet();
             dataSet.arms = new List<WiperArm>();
@@ -96,6 +108,14 @@ namespace JSONDatabaseBuilder
             saveFileDialog1.Filter = "Javascript Object Notation files (*.json)|*.json|All files (*.*)|*.*";
             saveFileDialog1.FilterIndex = 0;
             saveFileDialog1.RestoreDirectory = true;
+            if ((defaultFile != null) || (defaultFile != ""))
+            {
+                saveFileDialog1.InitialDirectory = defaultFile;
+
+               // string[] parts = defaultFile.Split('/');
+                saveFileDialog1.FileName = defaultFile;
+            }
+
 
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -108,7 +128,7 @@ namespace JSONDatabaseBuilder
             }
         }
 
-        private void loadData (bool append = false)
+        private void loadData (bool append = false, string dir = "")
         {
             Stream fileStream;
 
@@ -116,6 +136,25 @@ namespace JSONDatabaseBuilder
             openFileDialog1.Filter = "Javascript Object Notation files (*.json)|*.json|All files (*.*)|*.*";
             openFileDialog1.FilterIndex = 0;
             openFileDialog1.RestoreDirectory = true;
+
+            if(dir != "")
+            {
+                string s = File.ReadAllText(dir);
+                dataSet = new DataSet(s);
+                foreach (WiperArm arm in dataSet.arms)
+                {
+                    wiperArmBindingSource.Add(arm);
+                }
+                foreach (WiperBlade blade in dataSet.blades)
+                {
+                    wiperBladeBindingSource.Add(blade);
+                }
+                foreach (WiperMotor motor in dataSet.motors)
+                {
+                    wiperMotorBindingSource2.Add(motor);
+                }
+                return;
+            }
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
